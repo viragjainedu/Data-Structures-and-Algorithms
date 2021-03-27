@@ -1,4 +1,4 @@
-# Placement Questions for product based companies
+# Data Structures and Algorithms
 
 ## Day1: (Arrays)
 
