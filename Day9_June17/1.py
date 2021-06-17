@@ -1,3 +1,5 @@
+# n queens problem 
+
 #board printing 
 def print_r (board):
 	for i in range(len(board)):
