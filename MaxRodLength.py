@@ -22,3 +22,4 @@ if __name__ == '__main__':
     prices = [1, 3, 2, 3, 5, 17, 17, 20]
     rodLength = 5        # rod length
     print(Solve(prices,rodLength))
+    
