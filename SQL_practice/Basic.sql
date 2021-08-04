@@ -184,3 +184,26 @@ SELECT SupplierName
 FROM Suppliers
 WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price < 20);
 
+-- INTERSECT does all columns, INNER JOIN only the specified columns.
+(SELECT * FROM Worker)
+INTERSECT
+(SELECT * FROM WorkerClone);
+
+-- MINUS OPERATOR
+SELECT * FROM Worker
+MINUS
+SELECT * FROM Title;
+
+-- Q-33. Write an SQL query to determine the nth (say n=5) highest salary from a table.
+
+SELECT Salary FROM Worker ORDER BY Salary DESC LIMIT n-1,1;
+
+-- Write an SQL query to fetch the list of employees with the same salary.
+-- Ans.
+
+select distinct W.WORKER_ID, W.FIRST_NAME, W.Salary 
+from Worker W, Worker W1 
+where W.Salary = W1.Salary 
+and W.WORKER_ID != W1.WORKER_ID;
+
+--
